@@ -12,11 +12,12 @@ const corsOptions = {
   origin: [
     'http://localhost:5173',
     'http://localhost:5174',
-    'https://test-3b907.web.app'
+    'https://test-3b907.web.app',
+    'https://test-3b907.firebaseapp.com'
 
   ],
   credentials: true,
-  optionSuccessStatus: 200,
+  // optionSuccessStatus: 200,
 }
 app.use(cors(corsOptions));
 app.use(express.json());

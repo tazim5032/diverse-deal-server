@@ -1,5 +1,7 @@
 # DiverseDeal Server
 
+[Live Website](https://your-live-site-link.com)
+
 This repository contains the server-side code for the DiverseDeal e-commerce website, focusing on handling API requests, user authentication, and database operations.
 
 ## Server Deployment Steps

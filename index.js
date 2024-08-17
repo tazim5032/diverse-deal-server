@@ -111,7 +111,7 @@ async function run() {
         if (sorting == 'newest') {
           option = {
             sort: {
-              'index': -1,
+              'created_date': -1,
               
             }
           }

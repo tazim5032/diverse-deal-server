@@ -48,8 +48,8 @@ app.use(
   cors({
     origin: [
       "http://localhost:5173",
-      "https://your-production-domain1.com",
-      "https://your-production-domain2.com",
+      "https://test-3b907.web.app/",
+      "https://your-production-domain.com",
     ],
     credentials: true,
   })

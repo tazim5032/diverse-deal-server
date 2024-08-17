@@ -12,6 +12,7 @@ const corsOptions = {
   origin: [
     'http://localhost:5173',
     'http://localhost:5174',
+    'https://test-3b907.web.app'
 
   ],
   credentials: true,

@@ -98,10 +98,10 @@ async function run() {
 
     app.get('/products', async (req, res) => {
       let { page = 1, limit = 10, search, sorting, brand, category, min, max } = req.query;
-      // const query = {};
+     
       min = parseInt(min);
       max = parseInt(max);
-      // console.log('from original  = ', min, max);
+     
       const skip = (page - 1) * limit;
       const query = {};
       let option = {};
@@ -114,13 +114,13 @@ async function run() {
       if (category) {
         query.category = new RegExp(category, 'i');
       }
-      // query.price = {$gte : min, $lte : max};
+     
       query.price = {};
       if (min) {
-        query.price.$gte = Number(min); // Minimum price filter
+        query.price.$gte = Number(min); 
       }
       if (max) {
-        query.price.$lte = Number(max); // Maximum price filter
+        query.price.$lte = Number(max); 
       }
       if (sorting) {
         if (sorting == 'newest') {
@@ -145,7 +145,7 @@ async function run() {
 
     app.get('/docCount', async (req, res) => {
       let { search, brand, category, min, max } = req.query;
-      // console.log(min, max);
+     
       min = parseInt(min);
       max = parseInt(max);
       const query = {};
@@ -160,13 +160,13 @@ async function run() {
       }
       query.price = {};
       if (min) {
-        query.price.$gte = Number(min); // Minimum price filter
+        query.price.$gte = Number(min); 
       }
       if (max) {
-        query.price.$lte = Number(max); // Maximum price filter
+        query.price.$lte = Number(max);
       }
       const countDoc = await productCollection.find(query).toArray();
-      // console.log(countDoc)
+      
       res.send(countDoc);
     })
 
